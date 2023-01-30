@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../imagenes_tienda"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PRUEBA-DEFINITIVA"
+	}
+}

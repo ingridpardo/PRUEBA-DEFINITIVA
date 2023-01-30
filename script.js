@@ -1,3 +1,71 @@
+// let url = "https://pokeapi.co/api/v2/type"
+
+// pokemonCall(url);
+
+// function pokemonCall(url){
+//     fetch(url)
+//     .then((res) => res.json())
+//     .then((res) => {
+//         for(let i = 0; i < res.results.length; i++){
+//             document.querySelector("#type").innerHTML += `
+//             <option value = "${res.results[i].url}">${res.results[i].name}</option>
+//             `
+//             console.log(res.results[i].name)
+            
+//         }
+//     if (res.next != null){
+//         pokemonCall(res.next);
+//     }
+//     })
+// }
+
+// document.querySelector("#type").addEventListener("change", function(){
+//     listaPokemon(document.querySelector("select").value)
+// })
+
+// function listaPokemon(url){
+//     fetch(url)
+//     .then((res) => res.json())
+//     .then((res) =>{
+
+//         document.querySelector("#pokemon").innerHTML = ""
+//         for(let j = 0; j < 100; j++){
+
+//             let listaPokemon = res.pokemon[j]
+            
+//             document.querySelector("#pokemon").innerHTML += `
+//             <option>${listaPokemon.pokemon.name}</option>
+//             `
+//             console.log(res.listaPokemon); 
+//         }
+//     })   
+// }
+
+// // let infoPokemon = res.results[j].url
+
+// // function infoCallPokemon (infoPokemon){
+// //     fetch(infoPokemon)
+// //     .then((res) => res.json())
+// //     .then((res) => {
+
+// //         document.querySelector("div").innerHTML = `
+// //         <p>${res.pokemon.name}</p>
+// //         `
+// //     })
+// //     }
+
+// //     function datosPokemonCall(url){
+// //         fetch(url)
+// //         .then((res)=> res.json)
+// //         .then((res) =>{
+// //             infoCallPokemon(infoPokemon)
+// //         })
+// //     }
+
+// //     document.querySelector("select").addEventListener("change",function(){
+// //         datosPokemonCall(document.querySelector("select").value)
+// //     })
+
 let url="https://pokeapi.co/api/v2/type";
 
 apiCall(url);
@@ -15,7 +83,6 @@ function apiCall(url){
         if(res.next != null){
             apiCall(res.next) // LO PUEDES OMITIR PORQUE EN EL API NO TIENE NI ARRIBA NI ABAJO 
         }
-         
     })
 }
 
@@ -35,7 +102,6 @@ document.querySelector("#type").addEventListener("change" , function(){
                 document.querySelector("#pokemon").innerHTML += `
                 <option value="${listaPokemon.pokemon.url}">${listaPokemon.pokemon.name}</option>`
             }
-           
             }) 
         }
     
@@ -55,44 +121,5 @@ function showPokemonData(url){
         `
         console.log(res);
     })
-   
 
 }
-
-
-
-
-
-// let div = document.querySelector("div");
-
-// let divPokemon = document.createElement("div");
-// let h2 = document.createElement("h2");
-// let img = document.createElement("img");
-
-
-// divPokemon.className = `pokemon${res.name}`;
-// h2.textContent = res.name; 
-// img.src = res.sprites.front_default;
-
-// divPokemon.appendChild(h2);
-// divPokemon.appendChild(img);
-// div.appendChild(divPokemon);
-
-
-
-
-
-// let infoPokemon = res.results[j].url;
-
-// function infoCall(infoPokemon){
-//     fetch(infoPokemon)
-//     .then((res) => res.json())
-//     .then((res) => {
-//         console.log(res);
-
-//     })
-
-// }
-
-// infoCall(infoPokemon);
-
