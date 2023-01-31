@@ -70,3 +70,14 @@ function showPokemonData(url){
     })
 
 }
+
+localArray = localStorage.getItem("localArray")
+localArray = JSON.parse(localArray);
+for(let i = 0; i < localArray.length; i++){
+    document.getElementById("prueba").innerHTML += `
+    ${localArray[i].name}
+    `
+}
+
+
+
