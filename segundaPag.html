@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="icono-pokemon.png">
+    <link rel="stylesheet" href="./style.css" />
     <title>POKEDEX</title>
 </head>
 <body>
-    <select id="type"></select>
-    <select id="pokemon"></select>
-    <div></div>
-    <script src="script.js"></script>
+    <header>
+        <div class="logo">
+            <a href="index.html" class="inicio">INICIO</a>
+            <img src="logo-pokemon.png" alt="logo de pokemon"/>
+
+        </div>
+    </header>
+    <main id="fondo2">
+        <h2 id="segundaPag">Elige el tipo de Pokemon</h2>
+        <select id="type"></select>
+    <br>
+        <h2 id="eleccion">Elige tu Pokemon favorito</h2>
+        <select id="pokemon"></select>
+    <br>
+
+    <div class="card-container">
+        <div div class="card">
+            <div id="pokeCard"></div>
+        </div>
+    </div>
+        <script src="script.js"></script>
+    </main>
+    
 </body>
 </html>
